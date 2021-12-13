@@ -1,0 +1,27 @@
+.listItem {
+    display: flex;
+    text-align: center;
+}
+
+.button {
+    background: none;
+    border: 2px solid black;
+    font-family: 'Roboto Mono', monospace;
+    cursor: pointer;
+    height: 355px;
+    width: 325px;
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        border: 10px solid #FFB800;
+    }
+}
+
+.image {
+    max-height: 250px;
+    max-width: 250px;
+}
