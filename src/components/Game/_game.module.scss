@@ -1,0 +1,57 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    position: relative;
+
+    &.computer{
+        background: url('../../assets/images/computer-wins.svg') right top no-repeat;
+        background-size: auto 100%;
+    }
+
+    &.you{
+        background: url('../../assets/images/you-win.svg') left top no-repeat;
+        background-size: auto 100%;
+    }
+
+    &.draw {
+        background: rgb(255,184,0);
+        background: linear-gradient(90deg, rgba(255,184,0,1) 50%, rgba(0,240,255,1) 50%, rgba(0,240,255,1) 100%);
+    }
+}
+
+.wrapper.computer h1.you,
+.wrapper.you h1.computer,
+.wrapper.draw h1{
+  visibility: hidden;
+}
+
+.image {
+    mix-blend-mode: multiply;;
+}
+
+.computerPick .image {
+    transform: scaleX(-1);
+}
+
+.playAgain {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2rem;
+    border: 2px solid black;
+    background: none;
+    padding: 15px 85px;
+    cursor: pointer;
+  }
+  
+  .playAgain:hover {
+    background: black;
+    color: white;
+  }
